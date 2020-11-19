@@ -27,16 +27,8 @@ function copyTextToClipboard(getPageTitle,pageUrl){
 chrome.runtime.onInstalled.addListener(() => {
     chrome.contextMenus.create(
         {
-            "title": 'このページ→マークダウン',
+            "title": 'get markdown',
             "id" : "page",
-            "type" : "normal",
-    		"contexts" : ["all"]
-        }
-    );
-    chrome.contextMenus.create(
-        {
-            "title": 'リンク→マークダウン',
-            "id" : "link",
             "type" : "normal",
     		"contexts" : ["all"]
         }
@@ -44,16 +36,11 @@ chrome.runtime.onInstalled.addListener(() => {
 
 });
 chrome.contextMenus.onClicked.addListener(function(info) {
-    const selectedMenu = info.menuItemId;
-    switch (selectedMenu) {　//呼び出されたメニューによりﾊｧﾊｧする回数を変える
 
-        case 'page':
+    if (info.linkUrl == undefined) {
         copyTextToClipboard(info.selectionText,info.pageUrl);
-            break;
-
-        case 'link':
+    } else {
         copyTextToClipboard(info.selectionText,info.linkUrl);
-            break;
     }
 
-    });
+});
