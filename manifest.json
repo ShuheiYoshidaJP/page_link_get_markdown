@@ -1,0 +1,16 @@
+{
+    "manifest_version": 2,
+    "name": "page link copy",
+    "version": "1.0",
+    "description": "paris asshi (fixed)",
+    "background": {
+        "scripts": ["myscript.js"],
+        "persistent": false
+    },
+    "permissions": [
+        "activeTab",
+        "contextMenus",
+        "http://*/*",
+        "https://*/*"
+    ]
+}
