@@ -8,7 +8,7 @@
 
 ### 1、参照したいページで右クリックを押す
 
-![undefined](https://user-images.githubusercontent.com/62702170/99645431-9185f800-2a92-11eb-8ec6-0363b1704a31.png)
+![undefined](https://user-images.githubusercontent.com/62702170/99648280-32c27d80-2a96-11eb-9f7b-c8f791163f9b.png)
 
 ### 2、メニューの [page link copy] から [このページ→マークダウン] を選択
 
